@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %} Update Registration {% endblock title %}
+{% block body %} 
+    <form action="/update_registration/{{re.ri}}" method="post">
+    <div class="container my-3">  
+      <h2>Update Register</h2>
+        <form class="row g-3">
+          <div class="row g-3 my-2">
+              <div class="col-md-3">
+                <label for="ri" class="form-label">Registration ID</label>
+                <input class="form-control" id="ri" value="{{re.ri}}" name="rdi">
+              </div>
+              <div class="col-md-3">
+                <label for="pi" class="form-label">Person ID</label>
+                <input class="form-control" id="pi" value="{{re.pi}}" name="pdi">
+              </div>
+          </div>
+          <div class="row g-3 my-2">
+              <div class="col-md-3">
+                <label for="vi" class="form-label">Vaccine ID</label>
+                <input class="form-control" id="vi" value="{{re.vi}}" name="vdi">
+              </div>
+              <div class="col-md-3">
+                <label for="da" class="form-label">Date</label>
+                <input class="form-control" id="da" value="{{re.da}}" name="dda">
+              </div>
+          </div>
+          <div class="row g-3 my-2">
+              <div class="col-md-3">
+                <label for="dn" class="form-label">Dose No.</label>
+                <input class="form-control" id="dn" value="{{re.dn}}" name="ddn">
+              </div>
+              <div class="col-md-3">
+                <label for="si" class="form-label">Slot ID</label>
+                <input class="form-control" id="si" value="{{re.si}}" name="sdi">
+              </div>
+          </div>
+          <div class="row g-3 my-2">
+              <div class="col">
+                <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+          </div>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+{% endblock body %}
